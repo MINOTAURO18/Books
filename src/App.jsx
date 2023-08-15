@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-    <Nav books={books} setBooks={setBooks}/>
+    <Nav books={books}/>
      <Home books={books}/>
     </>
   )
