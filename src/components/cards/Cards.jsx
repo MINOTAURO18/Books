@@ -8,7 +8,7 @@ const Cards = ({ books }) => {
           <div className={styles.card} key={index}>
             <img src={book.book.cover} />
             <span className={styles.title}>
-              <h2>ABOUT</h2>
+              <h2>{book.book.title}</h2>
             </span>
           </div>
         );

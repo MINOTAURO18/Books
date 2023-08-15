@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Nav from './components/nav/Nav'
 import Home from './views/home/Home'
 import data from './data.json'
@@ -11,14 +12,15 @@ function App() {
   useEffect(() => {
     setBooks(data.library)
   }, [])
-  // const Libros = [...data.library]
-  // console.log(Libros)
+  
 
 
   return (
     <>
     <Nav books={books}/>
-     <Home books={books}/>
+    <Routes>
+      <Route path='/' element={<Home books={books}/>}/>
+    </Routes>
     </>
   )
 }
