@@ -21,7 +21,7 @@ const Nav = ({books, setBooks, darkMode, setDarkMode}) => {
   }
 
   const DarkMode = () => {
-    darkMode ? setDarkMode(false) : setDarkMode(true)
+    setDarkMode(!darkMode)
   }
   return (
     <nav className={`${styles.nav} ${darkMode  ? styles.black : styles.white} ` }>
