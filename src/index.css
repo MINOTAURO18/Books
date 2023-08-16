@@ -1,9 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(90deg,rgb(18, 18, 18),rgb(33, 31, 31));
+html{
+    transition: all .3s ease-in-out;
+}
+
+
+
+.white {
+  background-color: rgb(232, 235, 238);
+  transition: all 0.3s ease;
+}
+
+.black {
+  background: rgb(23, 22, 22);
+  transition: all 0.3s ease;
 }

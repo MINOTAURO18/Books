@@ -8,6 +8,7 @@ import './index.css'
 function App() {
 
   const [books, setBooks] = useState([])
+  const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
     setBooks(data.library)
@@ -16,12 +17,12 @@ function App() {
 
 
   return (
-    <>
-    <Nav books={books}/>
+    <main className={darkMode ? 'black' : 'white'}>
+    <Nav books={books} darkMode={darkMode} setDarkMode={setDarkMode}/>
     <Routes>
       <Route path='/' element={<Home books={books}/>}/>
     </Routes>
-    </>
+    </main>
   )
 }
 

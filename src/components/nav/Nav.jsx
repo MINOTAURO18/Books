@@ -2,8 +2,7 @@ import moon from "../../assets/moon.svg";
 import sun from "../../assets/sun.svg";
 import styles from "../nav/nav.module.css";
 
-const Nav = ({books, books2, setBooks}) => {
-  console.log(books2)
+const Nav = ({books, setBooks, darkMode, setDarkMode}) => {
 
   const handlerTerror = () => {
     
@@ -20,8 +19,12 @@ const Nav = ({books, books2, setBooks}) => {
   const handlerAll = () => {
     
   }
+
+  const DarkMode = () => {
+    darkMode ? setDarkMode(false) : setDarkMode(true)
+  }
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${darkMode  ? styles.black : styles.white} ` }>
       <h1>JAMY-LIBRARY</h1>
       <div className={styles.buttons}>
         <button onClick={handlerFiction}>boton</button>
@@ -31,7 +34,7 @@ const Nav = ({books, books2, setBooks}) => {
       </div>
 
       <div className={styles.image}>
-        <img src={sun} alt="" />
+        <img onClick={DarkMode}  src={darkMode ? sun : moon} alt="" />
       </div>
     </nav>
   );

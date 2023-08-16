@@ -1,5 +1,4 @@
 .nav {
-  background: linear-gradient(90deg, rgb(18, 18, 18), rgb(33, 31, 31));
   position: sticky;
   top: 0;
   z-index: 9;
@@ -44,4 +43,15 @@
     background-color: aliceblue;
     border: none;
     border-radius: 5px;
+}
+
+.white {
+  background-color: rgb(232, 235, 238);
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.black {
+  background: rgb(23, 22, 22);
+  transition: all 0.3s ease;
 }
