@@ -7,14 +7,20 @@ import './index.css'
 
 function App() {
 
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState({
+    allBooks: [],
+    allBooks2: []
+  })
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
     return savedMode ? JSON.parse(savedMode) : false;
   })
 
   useEffect(() => {
-    setBooks(data.library)
+    setBooks({
+      allBooks: data.library,
+      allBooks2: data.library
+    })
   }, [])
 
   useEffect(() => {
@@ -30,9 +36,9 @@ function App() {
 
   return (
     <main className={darkMode ? 'black' : 'white'}>
-    <Nav books={books} darkMode={darkMode} setDarkMode={setDarkMode}/>
+    <Nav books={books} setBooks={setBooks} darkMode={darkMode} setDarkMode={setDarkMode}/>
     <Routes>
-      <Route path='/' element={<Home books={books}/>}/>
+      <Route path='/' element={<Home books={books} setBooks={setBooks}/>}/>
     </Routes>
     </main>
   )
