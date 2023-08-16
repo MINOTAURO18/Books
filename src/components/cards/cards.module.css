@@ -1,12 +1,12 @@
 .cards{
     width: 100%;
-    min-height: 100vh;
-    padding: 5% 8%;
+    min-height: 90vh;
+    padding: 4% 8%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
 }
 
 
