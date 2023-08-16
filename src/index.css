@@ -8,6 +8,10 @@ html{
     transition: all .3s ease-in-out;
 }
 
+body{
+  transition: all .3s ease-in-out;
+}
+
 
 
 .white {

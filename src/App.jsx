@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import Nav from './components/nav/Nav'
 import Home from './views/home/Home'
 import data from './data.json'
